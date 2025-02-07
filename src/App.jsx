@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className='container'>
       <div className='bg-black text-white'>
-            <h1>Expense Tracker</h1>
+            <h1 className='text-center'>Expense Tracker</h1>
       </div>
       {/* Budget input */}
       <div className="form-floating my-3">

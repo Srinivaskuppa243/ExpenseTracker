@@ -29,7 +29,7 @@ const ExpenseInput = ({ addExpense }) => {
                     <div className="form-floating">
                         <select className="form-select" id="floatingSelect" value={category}
                             onChange={(e) => setCategory(e.target.value)}>
-                            <option value="All">All</option>
+                            <option value="All">Expense Type</option>
                             <option value="Food">Food</option>
                             <option value="Entertainment">Entertainment</option>
                             <option value="Travel">Travel</option>

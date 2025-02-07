@@ -3,6 +3,7 @@ import React from 'react'
 const ExpenseList = ({ expenses }) => {
   return (
     <div className="card p-3 shadow ">
+      <h3 className='card-title mx-auto fw-bold'> Summary</h3>
       <table className='table table-bordered table-hover mt-2'>
         <thead>
        <tr className='table-dark'>
