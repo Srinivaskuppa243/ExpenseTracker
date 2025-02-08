@@ -7,7 +7,7 @@ import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
   //custom hook
-  let { budget, setBudget, addExpense, expenses, totalExpenses, filter, filterExpenses, setFilter, setSearchQuery } = useExpensesManager()
+  let { budget, setBudget, addExpense,setExpenses,expenses, totalExpenses, filter, filterExpenses, setFilter, setSearchQuery } = useExpensesManager()
 
   // state to hold the Search Tearm
   const [searchTerm, setSearchTerm] = useState("")
@@ -44,7 +44,7 @@ const App = () => {
             <div className="form-floating my-3">
               <input type="text" className="form-control" id="search" value={searchTerm}
                 placeholder='Search...' onChange={(e) => setSearchTerm(e.target.value)} />
-              <label htmlFor="search">Search</label>
+              <label htmlFor="search">Search...</label>
             </div>
           </div>
 
@@ -63,10 +63,11 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* Expenses list */}
-      <ExpenseList expenses={filterExpenses} />
-      {/* Expenses summaty */}
+      {/* Expenses summary */}
       <ExpenseSummary totalExpenses={totalExpenses} budget={budget} />
+      {/* Expenses list */}
+      <ExpenseList expenses={filterExpenses} setExpenses={setExpenses}/>
+      
     </div>
   )
 }
